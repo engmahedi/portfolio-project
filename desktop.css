@@ -1,0 +1,108 @@
+/*-------------*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*--navbar starts--
+-------------------*/
+.navbar .nav-logo{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.navbar .nav-heading h1{
+  text-align: right;
+  padding-top: 30px;
+}
+.navbar .nav-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+padding-top: 30px;
+}
+/*--navbar ends--
+------------------*/
+
+/*--profile starts--
+--------------------*/
+
+.profile .top-weather-icon{
+  width: 120px;
+  top: 30px;
+  right: 160px;
+  position: absolute;
+  transition:width 2s, transform 2s;
+  
+}
+
+.profile .top-weather-icon:hover{
+  transform: rotate(360deg);
+  width: 150px;
+}
+
+.profile .profile-des p{
+    width: 50%;
+}
+
+.profile .bottom-weather-icon{
+  width: 120px;
+  bottom: 30px;
+  left: 160px;
+  position: absolute;
+  transition: width 2s, transform 2s;
+ 
+}
+
+.profile .bottom-weather-icon:hover{
+  transform: rotate(360deg);
+  width: 150px;
+}
+
+/*--profile ends--
+------------------*/
+
+/*--About Starts--*/
+
+.aboutme-desc p{
+  text-align: left;
+}
+
+/*--About ends--*/
+
+/*--- professional experience starts ---*/
+.professional-experience{
+  padding: 1% 5%;
+}
+
+
+/*--- professional experience ends ---*/
+
+/*--- Contact Starts ---*/
+.contact button{
+  
+  width: 150px;
+  
+}
+
+/*--- Contact Ends ---*/
+
+/*--- Footer Starts ---*/
+.footer{
+  margin-top: 15px;
+}
+
+.footer-menu a{
+  display: inline;
+  margin: 5px 10px;
+}
+
+/*--- Footer Ends ---*/

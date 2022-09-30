@@ -1,0 +1,431 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+  margin: 0;
+}
+
+[class*="col-"]{
+  float: left;
+  padding: 10px;
+}
+
+[class*="col-"]{
+  width: 100%;
+}
+
+/*--navbar starts--*/
+
+.navbar{
+  background-color: rgb(74, 185, 148);
+  text-align: center;
+}
+
+.navbar .nav-logo{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.navbar img{
+  width: 100px;
+  border: 3px solid white;
+  border-radius: 50%;
+
+}
+
+.navbar .nav-heading h1{
+  color: white;
+  margin: 0;
+  padding: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.navbar .nav-menu{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar .nav-menu a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  margin: 7px;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: aqua;
+  border-radius: 15px;
+}
+
+.navbar .nav-menu a:hover{
+  background-color: gray;
+}
+
+
+.navbar::after{
+  content: "";
+  display: table;
+  clear: both;
+    
+}
+/*--navbar ends--*/
+
+/*--profile starts--*/
+
+.profile{
+  text-align: center;
+  padding: 120px;
+  position: relative;
+
+}
+
+.profile .top-weather-icon{
+  width: 120px;
+  top: 20px;
+  right: 60px;
+  position: absolute;
+  transition: transform 2s;
+ padding-top: 20px;
+}
+
+.profile .top-weather-icon:hover{
+  transform: rotate(360deg);
+}
+
+.profile .profile-des h1{
+  font-family: 'Satisfy', cursive;
+  font-size: 3rem;
+}
+
+.profile .profile-des p{
+  font-size: 1.2rem;
+  color: gray;
+  width: 90%;
+  margin: 0 auto 20px auto;
+}
+
+.profile .bottom-weather-icon{
+  width: 120px;
+  bottom: 20px;
+  left: 60px;
+  position: absolute;
+  transition: transform 2s;
+  padding-bottom: 20px;
+}
+
+.profile .bottom-weather-icon:hover{
+  transform: rotate(360deg);
+}
+
+.profile::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+/*--profile ends--*/
+
+
+
+/*--About Starts--*/
+
+.about{
+  background-color: #39a4ac;
+  text-align: center;
+  padding: 1% 7%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about h2{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.about .dotted-hr{
+  border: 6px dotted white;
+  border-bottom: none;
+  margin: 10px auto;
+  width: 110px;
+}
+
+.about .aboutme-img img{
+  width: 250px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.aboutme-desc p{
+  font-size: 1rem;
+  text-align: center;
+}
+
+.aboutme-desc a{
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.cv-button{
+  background-color: rgb(62, 130, 107);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+
+.about::after{
+  clear: both;
+  display: table;
+  content: '';
+}
+
+/*--About ends--*/
+
+
+/*--- professional experience starts ---*/
+
+.professional-experience{
+  padding: 1% 1%;
+}
+
+.professional-experience .card{
+  background-color: #a39e9c;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.3s;
+  height: 550px;
+}
+
+.professional-experience .card:hover{
+  box-shadow: 0 4px 8px 5px black;
+}
+
+.card-icon{
+  text-align: center;
+}
+
+.card-icon img{
+  width: 120px;
+  margin-top: 20px;
+  border: 5px solid white;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.card-title h2{
+  background-color: #616161;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+.skills-container{
+  padding-right: 45px;
+}
+
+.skills-container li{
+  list-style: none;
+  font-weight: bolder;
+  margin: 30px 10px;
+  position: relative;
+}
+
+.skills-container li::before{
+  content: '';
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: rgb(86, 86, 153, .5);
+  border-radius: 1000px;
+}
+
+.skills-container li::after{
+  content: '';
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: rgb(86, 86, 153, 1);
+  border-radius: 1000px;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 3;
+}
+
+.skills-container li.html::after{
+  animation-name: html;
+}
+@keyframes html{
+  to{
+    width: 80%;
+  }
+}
+
+.skills-container li.css::after{
+  animation-name: css;
+}
+@keyframes css{
+  to{
+    width: 70%;
+  }
+}
+
+.skills-container li.js::after{
+  animation-name: js;
+}
+@keyframes js{
+  to{
+    width: 50%;
+  }
+}
+
+.skills-container li.git::after{
+  animation-name: git;
+}
+@keyframes git{
+  to{
+    width: 30%;
+  }
+}
+
+.skills-container li.react::after{
+  animation-name: react;
+}
+@keyframes react{
+  to{
+    width: 10%;
+  }
+}
+.professional-experience::after{
+  clear: both;
+  display: table;
+  content: '';
+}
+
+
+/*--- professional experience ends ---*/
+
+/*--- Contact Starts ---*/
+
+.contact{
+  padding: 1% 7%;
+  background-color: #39a4ac;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-form h2{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.contact-form .dotted-hr{
+  border: 6px dotted #fff;
+  border-bottom: none;
+  width: 130px;
+  margin: 10px auto;
+}
+
+.contact-form input, textarea{
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.submit button{
+  color: #fff;
+  background-color: rgb(29, 117, 88);
+  padding: 5px;
+  margin: 5px ;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.submit button:hover{
+  background-color: gray;
+}
+
+.social-contact h2{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.social-contact .dotted-hr{
+  border: 6px dotted #fff;
+  border-bottom: none;
+  width: 130px;
+  margin: 10px auto;
+}
+
+.social-icon .btn{
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  font-size: 30px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+   margin: 5px;
+}
+
+.social-icon .btn:hover{
+  background-color: gray;
+}
+.contact::after{
+  clear: both;
+  display: table;
+  content: '';
+}
+/*--- Contact ends ---*/
+
+/*--- Footer Starts ---*/
+.footer{
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  color: white;
+}
+
+.footer-menu a{
+  color: white;
+text-decoration: none;
+ display: block;
+ margin: 10px 0;
+}
+
+.footer-menu a:hover{
+  color: orange;
+}
+
+.footer-desc{
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.footer::after{
+  clear: both;
+  display: table;
+  content: '';
+}
+
+/*--- Footer Ends ---*/
